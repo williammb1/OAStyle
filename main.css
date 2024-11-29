@@ -1,0 +1,39 @@
+vfrc-launcher {
+  width: 120px; /* Adjust the width to your preference */
+  height: 60px; /* Adjust the height to your preference */
+  border-radius: 10px; /* Adjust the border-radius for rounded corners */
+  padding: 0; /* Set padding to 0 */
+}
+
+.vfrc-launcher img {
+  width: 90%; /* Make the image width fill the container */
+  height: 90%; /* Make the image height fill the container */
+  object-fit: cover; /* Cover the container without distorting the image, cropping it if necessary */
+  border-radius: 10px; /* Ensure the image corners are rounded like the launcher */
+}
+
+/* Hide the original watermark text */
+.vfrc-footer--watermark {
+  font-size: 0; /* Hides the text by setting its font size to 0 */
+  visibility: hidden; /* Makes the element invisible */
+}
+
+/* Add your custom text */
+.vfrc-footer--watermark::after {
+  content: "Custom built for Outdoor Action by Willbot.ai";
+  visibility: visible; /* Make the pseudo-element visible */
+  font-size: 14px; /* Restore the font size for your custom text */
+  /* Add additional styling as needed */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .vfrc-launcher {
+    width: 84px; /* 30% smaller width */
+    height: 42px; /* 30% smaller height */
+  }
+
+  .vfrc-footer--watermark::after {
+    font-size: 10px; /* Smaller font size for mobile */
+  }
+}
