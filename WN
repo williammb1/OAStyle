@@ -1,0 +1,13 @@
+/* Hide the original watermark text */
+.vfrc-footer--watermark {
+  font-size: 0; /* Hides the text by setting its font size to 0 */
+  visibility: hidden; /* Makes the element invisible */
+}
+
+/* Add your custom text */
+.vfrc-footer--watermark::after {
+  content: "Custom built for Wireless Nation by Willbot.ai";
+  visibility: visible; /* Make the pseudo-element visible */
+  font-size: 14px; /* Restore the font size for your custom text */
+  /* Add additional styling as needed */
+}
